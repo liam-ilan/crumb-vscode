@@ -1,0 +1,30 @@
+{
+  "name": "crumb",
+  "displayName": "Crumb",
+  "description": "Syntax highlighting for the Crumb programming language.",
+  "version": "0.0.1",
+  "icon": "assets/icon.png",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/liam-ilan/crumb-vscode.git"
+  },
+  "contributes": {
+    "languages": [{
+      "id": "crumb",
+      "aliases": ["Crumb", "crumb"],
+      "extensions": [".crumb"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "crumb",
+      "scopeName": "source.crumb",
+      "path": "./syntaxes/crumb.tmLanguage.json"
+    }]
+  }
+}

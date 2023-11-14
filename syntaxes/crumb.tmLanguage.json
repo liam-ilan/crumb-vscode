@@ -1,0 +1,46 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Crumb",
+	"patterns": [
+		{"include": "#keywords"},
+		{"include": "#strings"},
+		{"include": "#comment"},
+    {
+      "name": "constant.numeric.crumb",
+      "match": "\\b[[:digit:]]+(\\.[[:digit:]]*)?"
+    }
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+        "name": "keyword.control.crumb",
+        "match": "<\\-"
+      },
+      {
+        "name": "keyword.control.crumb",
+        "match": "\\->"
+      },
+      {
+        "name": "keyword.control.crumb",
+        "match": "="
+      }]
+    },
+		"strings": {
+			"name": "string.quoted.double.crumb",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.crumb",
+					"match": "\\\\(x[A-Fa-f0-9][A-Fa-f0-9]?|.)"
+				}
+			]
+		},
+    "comment": {
+      "name": "comment.line.crumb",
+      "begin": "//",
+      "end": "$"
+    }
+	},
+	"scopeName": "source.crumb"
+}
