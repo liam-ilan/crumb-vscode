@@ -19,7 +19,11 @@
       "id": "crumb",
       "aliases": ["Crumb", "crumb"],
       "extensions": [".crumb"],
-      "configuration": "./language-configuration.json"
+      "configuration": "./language-configuration.json",
+      "icon": {
+        "light": "./assets/language-icon.png",
+        "dark": "./assets/language-icon.png"
+      }
     }],
     "grammars": [{
       "language": "crumb",
